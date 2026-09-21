@@ -1,0 +1,7 @@
+pyspark>=3.4.0
+findspark>=2.0.1
+pandas>=1.5
+numpy>=1.23
+matplotlib>=3.6
+seaborn>=0.12
+folium>=0.14

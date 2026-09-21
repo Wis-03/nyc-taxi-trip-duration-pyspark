@@ -1,0 +1,37 @@
+# Data (too large for GitHub / not versioned — see data/README.md)
+data/*.csv
+data/*.zip
+*.csv
+*.zip
+train*
+test*
+sample_submission*
+
+# Spark
+metastore_db/
+derby.log
+spark-warehouse/
+*.crc
+checkpoint/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# ML training artifacts / experiment logs
+catboost_info/
+*.tfevents
+mlruns/
+lightning_logs/
+
+# Spark CSV output directories (e.g. nyc_taxi_predictions.csv/)
+*_predictions.csv/
