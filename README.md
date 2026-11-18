@@ -46,9 +46,11 @@ Metrics on the validation set (predictions back-transformed to seconds):
 | Linear Regression | 483 | 316 | 0.445 |
 | **Best model (tuned tree-based)** | **≈ 341** | **≈ 214** | **0.724** |
 
-The tuned tree-based model roughly **halves the error** of the linear baseline,
-with distance and airport-proximity features carrying most of the signal
-(distance ↔ duration correlation ≈ 0.77).
+The tuned tree-based model reduces validation **RMSE by approximately 29%**
+(from 483 s to ≈ 341 s) and **MAE by approximately 32%** (from 316 s to ≈ 214 s)
+compared with the linear baseline. Geospatial features, including distance and
+proximity to airports, provide important predictive signal
+(distance ↔ duration correlation ≈ 0.77 in the project analysis).
 
 ## Tech stack
 
@@ -70,7 +72,7 @@ nyc-taxi-trip-duration-pyspark/
 ## Getting started
 
 ```bash
-git clone https://github.com/<your-username>/nyc-taxi-trip-duration-pyspark.git
+git clone https://github.com/Wis-03/nyc-taxi-trip-duration-pyspark.git
 cd nyc-taxi-trip-duration-pyspark
 
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
@@ -80,6 +82,10 @@ pip install -r requirements.txt
 jupyter notebook notebooks/nyc_taxi_trip_duration.ipynb
 ```
 
+> **Reproducibility note:** Results above are reported from the project's validation run;
+> training outcomes may vary by environment and split. Follow the notebook to reproduce
+> the preprocessing, feature engineering, cross-validation, and evaluation.
+>
 > Interactive folium maps in the notebook were stripped from the committed
 > outputs to keep it lightweight — re-run those cells to regenerate them.
 
