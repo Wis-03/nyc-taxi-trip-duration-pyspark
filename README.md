@@ -78,7 +78,8 @@ cd nyc-taxi-trip-duration-pyspark
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
-# Download the data into data/  (see data/README.md), then:
+# Download and extract train.csv, test.csv, and sample_submission.csv into data/
+# (see data/README.md), then:
 jupyter notebook notebooks/nyc_taxi_trip_duration.ipynb
 ```
 
