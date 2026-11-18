@@ -87,6 +87,8 @@ jupyter notebook notebooks/nyc_taxi_trip_duration.ipynb
 > training outcomes may vary by environment and split. Follow the notebook to reproduce
 > the preprocessing, feature engineering, cross-validation, and evaluation.
 >
+> **Test scope:** this repository is notebook-based and does not currently include an automated test suite.
+>
 > Interactive folium maps in the notebook were stripped from the committed
 > outputs to keep it lightweight — re-run those cells to regenerate them.
 
